@@ -1,0 +1,15 @@
+import sympy as sp
+x1 = input("Введите выражение для x: ")
+y1 = input("Введите выражение для y: ")
+z1 = input("Введите выражение для z: ")
+x = sp.sympify(x1)
+y = sp.sympify(y1)
+z = sp.sympify(z1)
+p = x**(y/x)
+c = sp.cbrt(y/x)
+abs_part = sp.Abs(p - c)
+cos_part = sp.cos(y)
+f = (cos_part - (z / (y - x))) / (1 + (y - x)**2)
+s = abs_part + (y - x) * f
+s_value = s.evalf()
+print(f"Результат: {s_value:.6g}")
