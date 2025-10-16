@@ -1,8 +1,3 @@
-A = int(input("Введите число A: "))
-B = int(input("Введите число B: "))
-if A < B:
-    for i in range(A, B + 1):
-        print(i)
-else:
-    for i in range(A, B - 1, -1):
-        print(i)
+n = int(input("Введите натуральное число n <= 9: "))
+for i in range(1, n+1):
+    print(''.join(map(str, range(1, i+1))))

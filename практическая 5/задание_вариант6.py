@@ -1,0 +1,5 @@
+s = input("Введите строку: ")
+count_a = s.count('а')
+new_string = s.replace('а', '')
+print("Строка после удаления:", new_string)
+print("Количество удалённых символов 'а':", count_a)

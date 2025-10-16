@@ -1,8 +1,10 @@
-A = int(input("Введите число A: "))
-B = int(input("Введите число B: "))
-if A < B:
-    for i in range(A, B + 1):
-        print(i)
+n = int(input("Введите натуральное число n: "))
+if n < 0:
+    print("Факториал отрицательного числа не определен.")
+elif n == 0 or n == 1:
+    print(f"{n}! = 1")
 else:
-    for i in range(A, B - 1, -1):
-        print(i)
+    factorial = 1
+    for i in range(1, n + 1):
+        factorial *= i
+    print(f"{n}! = {factorial}")
